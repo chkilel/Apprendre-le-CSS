@@ -247,3 +247,196 @@ h1, h2, p {
   color: red;
 }
 ```
+
+---
+layout: two-cols
+
+---
+# Commentaires CSS
+Les commentaires CSS ne sont pas affichés dans le navigateur, mais ils peuvent aider à documenter votre code source.
+
+Les commentaires sont utilisés pour expliquer le code et peuvent vous aider lorsque vous modifiez le code source à une date ultérieure.
+Les commentaires sont ignorés par les navigateurs.
+Un commentaire CSS est placé à l’intérieur de l’élément `<style>`, et commence par `/*` et se termine par `*/`
+
+::right::
+```css
+/* This is a single-line comment */
+p {
+  color: red;
+}
+
+p {
+  color: red;  /* Set text color to red */
+}
+
+/* This is
+a multi-line
+comment */
+
+p {
+  color: red;
+}
+```
+
+---
+layout: two-cols
+
+---
+# Couleurs CSS
+Les couleurs sont spécifiées à l’aide de noms de couleurs prédéfinis ou de valeurs RGB, HEX, HSL, RGBA, HSLA.
+
+## Noms de couleur CSS
+En CSS, une couleur peut être spécifiée à l’aide d’un nom de couleur prédéfini :
+
+::right::
+<div class="w3-row w3-center" style="margin:0 -16px;line-height:80px;color:white;">
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:tomato;" >Tomate</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:orange;">Orange</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:dodgerblue;">DodgerBlue</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:mediumseagreen;">MediumSeaGreen</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:gray;" >Gris</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:slateblue;">Ardoise Bleue</div>
+  </div>
+</div>
+
+---
+
+# Couleurs CSS RGB
+Une valeur de couleur RGB représente les sources lumineuses ROUGE, VERT et BLEU.
+
+## Valeur RGB
+En CSS, une couleur peut être spécifiée en tant que valeur RGB, à l’aide de la formule suivante :
+
+> `rgb(rouge, vert, bleu)`
+
+Chaque paramètre (rouge, vert et bleu) définit l’intensité de la couleur entre 0 et 255.
+
+Par exemple, `rgb(255, 0, 0)` est affiché en rouge, car le rouge est défini sur sa valeur la plus élevée (255) et les autres sur 0.
+
+Pour afficher le noir, définissez tous les paramètres de couleur sur 0, comme suit : `rgb(0, 0, 0)`.
+
+Pour afficher le blanc, définissez tous les paramètres de couleur sur 255, comme ceci: `rgb(255, 255, 255)`.
+
+---
+
+# Couleurs CSS RGB (Exemples)
+Une valeur de couleur RGB représente les sources lumineuses ROUGE, VERT et BLEU.
+
+<h2 style="background-color:rgb(255, 0, 0); text-align:center; height:4rem; color:white">rgb(255, 0, 0)</h2>
+<h2 style="background-color:rgb(0, 0, 255); text-align:center; height:4rem; color:white">rgb(0, 0, 255)</h2>
+<h2 style="background-color:rgb(60, 179, 113); text-align:center; height:4rem; color:white">rgb(60, 179, 113)</h2>
+<h2 style="background-color:rgb(238, 130, 238); text-align:center; height:4rem; color:white">rgb(238, 130, 238)</h2>
+<h2 style="background-color:rgb(255, 165, 0); text-align:center; height:4rem; color:white">rgb(255, 165, 0)</h2>
+<h2 style="background-color:rgb(106, 90, 205); text-align:center; height:4rem; color:white">rgb(106, 90, 205)</h2>
+
+---
+
+# Couleurs CSS RGB (Exemples)
+Les nuances de gris sont souvent définies en utilisant des valeurs égales pour les 3 sources lumineuses :
+
+<h2 style="background-color:rgb(60, 60, 60); text-align:center; height:4rem; color:white;">rgb(60, 60, 60)</h2>
+<h2 style="background-color:rgb(90, 90, 90); text-align:center; height:4rem; color:white;">rgb(90, 90, 90)</h2>
+<h2 style="background-color:rgb(120, 120, 120); text-align:center; height:4rem; color:white;">rgb(120, 120, 120)</h2>
+<h2 style="background-color:rgb(180, 180, 180); text-align:center; height:4rem; color:white;">rgb(180, 180, 180)</h2>
+<h2 style="background-color:rgb(210, 210, 210); text-align:center; height:4rem; color:white;">rgb(210, 210, 210)</h2>
+<h2 style="background-color:rgb(240, 240, 240); text-align:center; height:4rem; color:white;">rgb(240, 240, 240)</h2>
+
+---
+
+# Valeur RGBA
+Les valeurs de couleur RGBA sont une extension des valeurs de couleur RGB avec une couche alpha - qui spécifie l’opacité d’une couleur.
+
+Une valeur de couleur RGBA est spécifiée avec : > `rgba(rouge, vert, bleu, alpha)`
+
+Le paramètre alpha est un nombre compris entre 0,0 (entièrement transparent) et 1,0 (opaque) :
+
+<h2 style="background-color:rgba(255, 99, 71, 0); text-align:center; height:3rem; color:black;">rgba(255, 99, 71, 0)</h2>
+<h2 style="background-color:rgba(255, 99, 71, 0.2); text-align:center; height:3rem; color:black;">rgba(255, 99, 71, 0.2)</h2>
+<h2 style="background-color:rgba(255, 99, 71, 0.4); text-align:center; height:3rem; color:black;">rgba(255, 99, 71, 0.4)</h2>
+<h2 style="background-color:rgba(255, 99, 71, 0.6); text-align:center; height:3rem; color:black;">rgba(255, 99, 71, 0.6)</h2>
+<h2 style="background-color:rgba(255, 99, 71, 0.8); text-align:center; height:3rem; color:black;">rgba(255, 99, 71, 0.8)</h2>
+<h2 style="background-color:rgba(255, 99, 71, 1); text-align:center; height:3rem; color:black;">rgba(255, 99, 71, 1)</h2>
+
+
+---
+
+# Couleurs CSS HEX
+En CSS, une couleur peut être spécifiée à l’aide d’une valeur hexadécimale sous la forme : #rrggbb
+
+## Valeur HEX
+
+`rr (rouge)`, `gg (vert)` et `bb (bleu)` sont des valeurs hexadécimales comprises entre 00 et ff (identiques à la décimale 0-255).
+
+Par exemple,
+- `#ff0000` est affiché en rouge, car le rouge est défini sur sa valeur la plus élevée `(ff)` et les autres sur la valeur la plus basse `(00)`.
+- Pour afficher le noir, définissez toutes les valeurs sur `00`, comme ceci : `#000000`.
+- Pour afficher le blanc, définissez toutes les valeurs sur `ff`, comme ceci : `#ffffff`.
+
+---
+layout: two-cols
+
+---
+# Couleurs CSS HEX (Exemples)
+
+
+<h2 style="background-color:#ff0000; text-align:center; height:3rem; color:black;">#ff0000</h2>
+<h2 style="background-color:#0000ff; text-align:center; height:3rem; color:black;">#0000ff</h2>
+<h2 style="background-color:#3cb371; text-align:center; height:3rem; color:black;">#3cb371</h2>
+<h2 style="background-color:#ee82ee; text-align:center; height:3rem; color:black;">#ee82ee</h2>
+<h2 style="background-color:#ffa500; text-align:center; height:3rem; color:black;">#ffa500</h2>
+<h2 style="background-color:#6a5acd; text-align:center; height:3rem; color:black;">#6a5acd</h2>
+
+::right::
+<br><br>
+<h2 style="background-color:#3c3c3c; text-align:center; height:3rem; color:black;">#3c3c3c</h2>
+<h2 style="background-color:#616161; text-align:center; height:3rem; color:black;">#616161</h2>
+<h2 style="background-color:#787878; text-align:center; height:3rem; color:black;">#787878</h2>
+<h2 style="background-color:#b4b4b4; text-align:center; height:3rem; color:black;">#b4b4b4</h2>
+<h2 style="background-color:#f0f0f0; text-align:center; height:3rem; color:black;">#f0f0f0</h2>
+<h2 style="background-color:#f9f9f9; text-align:center; height:3rem; color:black;">#f9f9f9</h2>
+
+---
+layout: two-cols
+
+---
+# Valeur HEXadécimale à 3 chiffres
+Le code hexadécimal à 3 chiffres est un raccourci pour certains codes hexadécimaux à 6 chiffres.
+
+Le code hexadécimal à 3 chiffres se présente sous la forme suivante : `#rvb`
+
+où `r, g et b` représente les composants rouge, vert et bleu avec des valeurs comprises entre 0 et f.
+
+Le code hexadécimal à 3 chiffres ne peut être utilisé que lorsque les deux valeurs (RR, GG et BB) sont les mêmes pour chaque composant.
+
+Donc, si nous avons `#ff00cc`, cela peut être écrit comme ceci: `#f0c`.
+
+::right::
+<br> <br>
+Exemple :
+```css
+body {
+  background-color: #fc9; /* same as #ffcc99 */
+}
+
+h1 {
+  color: #f0f; /* same as #ff00ff */
+}
+
+p {
+  color: #b58; /* same as #bb5588 */
+}
+```
+
+---
