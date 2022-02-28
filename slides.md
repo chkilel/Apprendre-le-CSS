@@ -425,18 +425,245 @@ Donc, si nous avons `#ff00cc`, cela peut être écrit comme ceci: `#f0c`.
 ::right::
 <br> <br>
 Exemple :
+
+```css
+  body {
+    background-color: #fc9; /* same as #ffcc99 */
+  }
+
+  h1 {
+    color: #f0f; /* same as #ff00ff */
+  }
+
+  p {
+    color: #b58; /* same as #bb5588 */
+  }
+```
+---
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+
+---
+# Arrière-plans CSS
+Les propriétés d’arrière-plan CSS sont utilisées pour ajouter des effets d’arrière-plan pour les éléments HTML.
+
+Dans ce chapitre, nous allons découvrir les propriétés d’arrière-plan CSS suivantes :
+
+- background-color
+- background-image
+- background-repeat
+- background-attachment
+- background-position
+- background (propriété abrégée)
+
+::right::
+- background-color
+- background-image
+- background-repeat
+- background-attachment
+- background-position
+- background (propriété abrégée)
+
+---
+layout: two-cols
+
+---
+# Couleur d’arrière-plan CSS
+La propriété `background-color` spécifie la couleur d’arrière-plan d’un élément.
+
+une couleur est le plus souvent spécifiée par :
+
+- un nom de couleur valide - comme `red`
+- une valeur HEX - comme `#ff0000`
+- une valeur RGB - comme `rgb(255,0,0)`
+
+**Exemple :**
+
 ```css
 body {
-  background-color: #fc9; /* same as #ffcc99 */
-}
-
-h1 {
-  color: #f0f; /* same as #ff00ff */
-}
-
-p {
-  color: #b58; /* same as #bb5588 */
+  background-color: lightblue;
 }
 ```
 
+::right::
+<br> <br>
+### Ici, les éléments `<h1>, <p> et <div>` auront des couleurs d’arrière-plan différentes :
+
+```css
+  h1 {
+    background-color: green;
+  }
+
+  div {
+    background-color: lightblue;
+  }
+
+  p {
+    background-color: yellow;
+  }
+```
 ---
+layout: two-cols
+
+---
+# Opacité / Transparence
+<br />
+La propriété `opacity` spécifie l’opacité/transparence d’un élément.
+Il peut prendre une valeur de 0,0 à 1,0. Plus la valeur est faible, plus elle est transparente:
+
+**Exemple :**
+
+<div class="grid grid-cols-2">
+  <div style="background-color:#4CAF50;opacity:1;padding:50px;color:black"><p _msthash="608907" _msttexthash="127374">opacité 1</p></div>
+  <div style="background-color:#4CAF50;opacity:0.6;padding:50px;color:black"><p _msthash="609180" _msttexthash="147004">opacité 0,6</p></div>
+  <div style="background-color:#4CAF50;opacity:0.3;padding:50px;color:black"><p _msthash="609453" _msttexthash="146380">opacité 0,3</p></div>
+  <div style="background-color:#4CAF50;opacity:0.1;padding:50px;color:black"><p _msthash="609726" _msttexthash="145964">opacité 0,1</p></div>
+</div>
+
+
+::right::
+<br> <br>
+
+```css
+  div {
+  background-color: green;
+  opacity: 0.3;
+}
+```
+
+<br>
+
+> Note: Lorsque vous utilisez la propriété `opacity` pour ajouter de la transparence à l’arrière-plan d’un élément, tous ses éléments enfants héritent de la même transparence.
+
+
+> Cela peut rendre le texte à l’intérieur d’un élément entièrement transparent difficile à lire.
+---
+layout: two-cols
+
+---
+# Transparence à l’aide de RGBA
+<br >
+
+Si vous ne souhaitez pas appliquer d’opacité aux éléments enfants, utilisez des valeurs de couleur RGBA.
+
+L’exemple suivant définit l’opacité de la couleur d’arrière-plan et non du texte :
+
+```css
+div {
+  /* Green background with 30% opacity */
+  background: rgba(0, 128, 0, 0.3)
+}
+```
+
+<div class="grid grid-cols-4">
+<div style="background:rgb(76, 175, 80);padding:20px;color:black"><p _msthash="611455" _msttexthash="183729">100% opacité</p></div>
+<div style="background:rgba(76, 175, 80,0.6);padding:20px;color:black"><p _msthash="611728" _msttexthash="1377467">60 % d’opacité</p></div>
+<div style="background:rgba(76, 175, 80,0.3);padding:20px;color:black"><p _msthash="612001" _msttexthash="1377194">30 % d’opacité</p></div>
+<div style="background:rgba(76, 175, 80,0.1);padding:20px;color:black"><p _msthash="612274" _msttexthash="1377012">10 % d’opacité</p></div>
+</div>
+
+
+::right::
+<br> <br>
+<br> <br>
+Nous avons appris de notre chapitre couleurs CSS que nous pouvons utiliser RGB comme valeur de couleur.
+
+En plus de RGB, nous pouvons utiliser une valeur de couleur RGB avec une couche alpha (RGBA) - qui spécifie l’opacité d’une couleur.
+
+> Une valeur de couleur RGBA est spécifiée avec : rgba(rouge, vert, bleu, alpha).
+>>> Le paramètre alpha est un nombre compris entre 0,0 (entièrement transparent) et 1,0 (entièrement opaque).
+---
+layout: two-cols
+
+---
+# Image d’arrière-plan CSS
+La propriété `background-image` spécifie une image à utiliser comme arrière-plan d’un élément.
+
+Par défaut, l’image est répétée afin de couvrir l’ensemble de l’élément.
+
+**Exemple :**
+
+Image d’arrière-plan pour une page :
+
+```css
+body {
+  background-image: url("paper.gif");
+}
+```
+
+> Note: <br>
+> Lorsque vous utilisez une image d’arrière-plan, utilisez une image qui ne perturbe pas le texte.
+
+::right::
+<br> <br>
+### L’image d’arrière-plan peut également être définie pour des éléments spécifiques, tels que l’élément `<p>`:
+
+```css
+  p {
+    background-image: url("paper.gif");
+  }
+```
+
+---
+layout: two-cols
+
+---
+# Répétition de l’image d’arrière-plan
+Par défaut, la propriété `background-image` répète une image horizontalement et verticalement.
+
+Par défaut, l’image est répétée afin de couvrir l’ensemble de l’élément.
+
+**Exemple :**
+
+```css
+body {
+  background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;
+}
+```
+
+> Pour répéter une image verticalement, définissez `background-repeat: repeat-y`;
+
+
+::right::
+<br> <br>
+## background-repeat: no-repeat
+
+L’affichage de l’image d’arrière-plan une seule fois est également spécifié par la propriété `background-repeat`
+
+```css
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+}
+```
+---
+layout: two-cols
+
+---
+# CSS Background Attachment
+La propriété `background-attachment` spécifie si l’image d’arrière-plan doit défiler ou rester fixe (ne défilera pas avec le reste de la page)
+
+**Exemple :**
+
+```css
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+```
+
+::right::
+<br> <br>
+### Exemple
+Pour spécifier que l’image d’arrière-plan doit défiler avec le reste de la page
+
+```css
+  body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+  }
+```
