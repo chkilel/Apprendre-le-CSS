@@ -667,3 +667,247 @@ Pour spécifier que l’image d’arrière-plan doit défiler avec le reste de l
     background-attachment: scroll;
   }
 ```
+
+---
+layout: two-cols
+
+---
+# Bordures CSS
+Les propriétés de bordure CSS permettent de spécifier le style, la largeur et la couleur de la bordure d’un élément.
+
+## Style de bordure CSS
+La propriété `border-style` spécifie le type de bordure à afficher.
+
+Les valeurs suivantes sont autorisées :
+
+- dotted - Définit une bordure pointillée
+- dashed - Définit une bordure pointillée
+- solid - Définit une bordure solide
+- double - Définit une double bordure
+- none - Ne définit aucune frontière
+- hidden - Définit une bordure cachée
+
+::right::
+- groove, ridge, inset, outset : Définissent une bordure 3D. L’effet dépend de la valeur de couleur de bordure
+
+La propriété `border-style` peut avoir de une à quatre valeurs (pour la bordure supérieure, la bordure droite, la bordure inférieure et la bordure gauche).
+
+**Exemple :**
+
+```css
+.dotted {border-style: dotted;}
+.dashed {border-style: dashed;}
+.solid {border-style: solid;}
+.double {border-style: double;}
+.groove {border-style: groove;}
+.ridge {border-style: ridge;}
+.inset {border-style: inset;}
+.outset {border-style: outset;}
+.none {border-style: none;}
+.hidden {border-style: hidden;}
+.mix {border-style: dotted dashed solid double;}
+```
+
+---
+layout: two-cols
+
+---
+# Largeur de bordure CSS
+La propriété `border-width` spécifie la largeur des quatre bordures.
+
+La largeur peut être définie comme une taille spécifique (en px, em, etc.) ou en utilisant l’une des trois valeurs prédéfinies :
+thin (mince), medium (moyenne), or thick (épaisse).
+
+<div class="w3-white w3-padding notranslate">
+<div style="border:5px solid;padding:8px;margin-top:8px;margin-bottom:16px">5px border-width</div>
+<div style="border:medium solid;padding:8px;margin-top:8px;margin-bottom:16px">medium border-width</div>
+<div style="border:2px dotted;padding:8px;margin-top:8px;margin-bottom:16px">2px border-width</div>
+<div style="border:thick dotted;padding:8px;margin-top:8px;margin-bottom:8px">thick border-width</div>
+
+</div>
+
+::right::
+
+## Exemple
+```css
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+}
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+```
+---
+layout: two-cols
+
+---
+# Largeurs latérales spécifiques
+La propriété `border-width` peut avoir de une à quatre valeurs (pour la bordure supérieure, la bordure droite, la bordure inférieure et la bordure gauche) :
+
+## Exemple
+
+```css
+p.one {
+  border-style: solid;
+  border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+}
+p.two {
+  border-style: solid;
+  border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+}
+p.three {
+  border-style: solid;
+  border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+}
+```
+::right::
+
+<p style="border-style: solid; border-width: 5px 20px;  border-color: red;">Some text.</p>
+<p style="border-style: solid; border-width: 20px 5px; border-color: red;">Some text.</p>
+<p style="border-style: solid; border-width: 25px 10px 4px 35px; border-color: red;">Some text.</p>
+---
+layout: two-cols
+
+---
+# Couleur de bordure CSS
+La propriété `border-color` est utilisée pour définir la couleur des quatre bordures.
+
+La couleur peut être définie par:
+- name - spécifiez un nom de couleur, comme: red
+- HEX - spécifiez une valeur HEX, comme: #ff0000
+- RVB - spécifiez une valeur RVB, comme:nrgb(255,0,0)
+- HSL - spécifiez une valeur HSL, comme: hsl(0, 100%, 50%)
+- transparent
+
+
+::right::
+## Exemple
+Démonstration des différentes couleurs de bordure :
+```css
+p.one {
+  border-style: solid;
+  border-color: red;
+}
+p.two {
+  border-style: solid;
+  border-color: green;
+}
+p.three {
+  border-style: dotted;
+  border-color: blue;
+}
+```
+<div style="border-style: solid;border-color: red;padding:8px;margin-top:8px;margin-bottom:16px; border-width:4px;">Red border</div>
+<div style="border-style: solid;border-color: green;padding:8px;margin-top:8px;margin-bottom:16px; border-width:4px;">Green border</div>
+<div style="border-style: dotted;border-color: blue;padding:8px;margin-top:8px;margin-bottom:8px; border-width:4px;">Blue border</div>
+
+---
+layout: two-cols
+
+---
+# Bordure CSS
+Alors, voici comment cela fonctionne:
+
+Si la propriété `border-style`a quatre valeurs :
+
+> `border-style: dotted solid double dashed;`
+- la bordure supérieure est pointillée
+- la bordure droite est solide
+- la bordure inférieure est double
+- la bordure gauche est pointillée
+
+Si la propriété a trois valeurs :border-style
+
+> `border-style: dotted solid double;`
+- la bordure supérieure est pointillée
+- les bordures droite et gauche sont solides
+- la bordure inférieure est double
+
+::right::
+
+Si la propriété a deux valeurs :border-style
+> `border-style: dotted solid;`
+- les bordures supérieure et inférieure sont pointillées
+- les bordures droite et gauche sont solides
+
+Si la propriété a une valeur :border-style
+> `border-style: dotted;`
+- les quatre bordures sont en pointillés
+
+---
+layout: two-cols
+
+---
+# Bordure CSS - propriété abregée
+Comme vous l’avez vu dans la page précédente, il existe de nombreuses propriétés à prendre en compte lorsqu’il s’agit des bordures.
+Pour raccourcir le code, il est également possible de spécifier toutes les propriétés de bordure individuelles dans une seul epropriété.
+La propriété `border` est une propriété abrégée pour les propriétés de bordure individuelles suivantes :
+
+### Exemple
+```css
+p {
+  border: 5px solid red;
+}
+```
+<p style="border:5px solid red;padding:2px">Some text</p>
+
+::right::
+
+### Bordure gauche
+```css
+p {
+  border-left: 6px solid red;
+}
+```
+<p style="border-left:6px solid red;padding:5px 5px;">Some text</p>
+
+### Bordure inférieure
+```css
+p {
+  border-bottom: 6px solid red;
+}
+```
+<p style="border-bottom:6px solid red;padding:5px 5px;">Some text</p>
+---
+layout: two-cols
+
+---
+# Bordures arrondies CSS
+La propriété `border-radius` permet d’ajouter des bordures arrondies à un élément :
+
+
+### Exemple
+```css
+.p1 {
+  border: 2px solid red;
+}
+.p2 {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+.p3 {
+  border: 2px solid red;
+  border-radius: 8px;
+}
+.p4 {
+  border: 2px solid red;
+  border-radius: 12px;
+}
+```
+
+::right::
+
+<p style="border: 2px solid red;padding:5px;">Bordure normale</p>
+<p style="border: 2px solid red;border-radius: 5px;padding:5px;">Bordure ronde</p>
+<p style="border: 2px solid red;border-radius: 8px;padding:5px;">Bordure plus arrondie</p>
+<p style="border: 2px solid red;border-radius: 12px;padding:5px;">Bordure la plus arrondie</p>
