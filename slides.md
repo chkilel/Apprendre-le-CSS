@@ -1172,7 +1172,7 @@ Le box model est essentiellement une boîte qui entoure chaque élément HTML.
 Il se compose de: marges, bordures, padding  et le contenu réel.
 
 ::right::
-![alt text](box-model.png "Title")
+![alt text](/box-model.png "Title")
 ---
 layout: two-cols
 ---
