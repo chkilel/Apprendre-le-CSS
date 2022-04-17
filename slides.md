@@ -911,3 +911,304 @@ La propriété `border-radius` permet d’ajouter des bordures arrondies à un �
 <p style="border: 2px solid red;border-radius: 5px;padding:5px;">Bordure ronde</p>
 <p style="border: 2px solid red;border-radius: 8px;padding:5px;">Bordure plus arrondie</p>
 <p style="border: 2px solid red;border-radius: 12px;padding:5px;">Bordure la plus arrondie</p>
+---
+layout: two-cols
+
+---
+# Marges CSS
+Les marges sont utilisées pour créer de l’espace autour des éléments, en dehors des bordures définies.
+
+Les propriétés CSS `margin` sont utilisées pour créer de l’espace autour des éléments, en dehors des bordures définies.
+
+Avec CSS `margin`, nous avons un contrôle total sur les marges.
+
+Il existe des propriétés permettant de définir la marge de chaque côté d’un élément (haut, droite, bas et gauche).
+```css
+p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+```
+
+::right::
+
+## Marge - Côtés individuels
+CSS possède des propriétés permettant de spécifier la marge de chaque côté d’un élément :
+```css
+margin-top
+margin-right
+margin-bottom
+margin-left
+```
+Toutes les propriétés de marge peuvent avoir les valeurs suivantes :
+
+- auto : le navigateur calcule la marge
+- valeur : spécifie une marge en px, pt, cm, etc.
+- % : spécifie une marge en % de la largeur de l’élément contenant
+- inherit : spécifie que la marge doit être héritée de l’élément parent
+
+> NB: Les valeurs négatives sont autorisées.
+---
+layout: two-cols
+
+---
+# Propriété abregée
+Pour raccourcir le code, il est possible de spécifier toutes les propriétés de marge dans une propriété.
+
+La propriété `margin` est une propriété abrégée pour les propriétés de marge individuelles suivantes :
+
+```css
+p {
+  margin: 25px 50px 75px 100px;
+}
+```
+
+::right::
+# La valeur automatique
+Vous pouvez définir la propriété margin pour centrer horizontalement l’élément dans son conteneur.auto
+
+L’élément occupera alors la largeur spécifiée et l’espace restant sera réparti également entre les marges gauche et droite.
+```css
+div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+}
+```
+---
+layout: two-cols
+
+---
+# La valeur héritée
+<br>
+
+Cet exemple montre comment hériter la marge gauche de l’élément `<p class="ex1">` de l’élément parent (`<div>`) :
+::right::
+```html
+<div>
+  <p class="ex1">
+    Texte
+  </p>
+</div>
+```
+
+```css
+div {
+  border: 1px solid red;
+  margin-left: 100px;
+}
+
+p.ex1 {
+  margin-left: inherit;
+}
+```
+---
+layout: two-cols
+
+---
+# Réduction de la marge CSS
+<br>
+
+Parfois, deux marges s’effondrent en une seule marge.
+
+Les marges supérieure et inférieure des éléments sont parfois réduites en une seule marge égale à la plus grande des deux marges.
+
+Cela ne se produit pas sur les marges gauche et droite! Seulement les marges supérieures et inférieures!
+
+<h1 style="margin: 0 0 50px 0;">Heading 1</h1>
+<h2 style="margin: 20px 0 0 0;">Heading 2</h2>
+
+::right::
+
+Regardez l’exemple suivant :
+
+```html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+```
+
+```css
+h1 {
+  margin: 0 0 50px 0;
+}
+
+h2 {
+  margin: 20px 0 0 0;
+}
+```
+---
+layout: two-cols
+
+---
+# CSS Padding
+Les propriétés CSS `padding` sont utilisées pour générer de l’espace autour du contenu d’un élément, à l’intérieur des bordures définies.
+
+CSS padding possède des propriétés permettant de spécifier le padding pour chaque côté d’un élément :
+
+- padding-top
+- padding-right
+- padding-bottom
+- padding-left
+
+::right::
+
+
+Toutes les propriétés de padding peuvent avoir les valeurs suivantes :
+
+- longueur: spécifie un rembourrage en px, pt, cm, etc.
+- %: spécifie un rembourrage en % de la largeur de l’élément contenant
+- inherit: spécifie que le remplissage doit être hérité de l’élément parent
+> Note: Les valeurs négatives ne sont pas autorisées.
+---
+layout: two-cols
+
+---
+# Padding et largeur de l’élément
+La propriété CSS `width` spécifie la largeur de la zone de contenu de l’élément.
+
+La zone de contenu est la partie à l’intérieur du padding, de la bordure et de la marge d’un élément (Box model).
+
+Ainsi, si un élément a une largeur spécifiée, le padding ajouté à cet élément sera ajouté à la largeur totale de l’élément.
+> C’est souvent un résultat indésirable.
+
+```css
+div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+````
+
+::right::
+# Exemple
+<br>
+
+```css
+div {
+  width: 300px;
+  padding: 25px;
+}
+```
+Ici, l’élément `<div>` a une largeur de `300px`. Cependant, la largeur réelle de l’élément `<div>` sera de `350px`
+
+> `(300px + 25px de padding gauche + 25px de padding droit)`
+
+
+Pour maintenir la largeur à 300px, quelle que soit le padding, on utilise la propriété `box-sizing`.
+
+Cela permet à l’élément de conserver sa largeur réelle meme si on augmente le padding, l’espace de contenu disponible diminuera.
+
+
+
+
+---
+layout: two-cols
+---
+# Hauteur, Largeur et Largeur maximale
+<br>
+
+Les propriétés `height` et `width` sont utilisés pour définir la hauteur et la largeur d’un élément.
+
+La propriété `max-width` permet de définir la largeur maximale d’un élément.
+
+> Les propriétés de hauteur et de largeur n’incluent pas le padding, les bordures ou les marges.
+
+Elles définissent la hauteur/largeur de la zone à l’intérieur du padding, de la bordure et de la marge de l’élément.
+
+::right::
+# Valeurs css de hauteur et de largeur
+<br>
+
+Les propriétés et peuvent avoir les valeurs suivantes :
+
+- auto: Il s’agit de la valeur par défaut. Le navigateur calcule la hauteur et la largeur
+- valeur: Définit la hauteur/largeur en px, em etc.
+- %: Définit la hauteur/largeur en pourcentage du bloc contenant
+- initial: Définit la hauteur/largeur sur sa valeur par défaut
+- inherit: La hauteur/largeur sera héritée de sa valeur parente
+---
+layout: two-cols
+---
+# Exemple
+```css
+div {
+  height: 100px;
+  width: 50%;
+  background-color: powderblue;
+}
+```
+
+<div style="width:50%;height:100px;padding:10px;background-color:powderblue;color:black;">
+ Cet élément a une hauteur de 100 pixels et une largeur de 50%
+</div>
+
+# Définition de la largeur maximale
+La propriété `max-width` permet de définir la largeur maximale d’un élément.
+::right::
+
+
+
+Le `max-width` peut être spécifié dans des valeurs de longueur, telles que px, cm, etc., ou en pourcentage (%) du bloc contenant, ou défini sur `none` valeur par défaut. (Signifie qu’il n’y a pas de largeur maximale).
+
+Le problème avec ce qui précède se produit lorsque la fenêtre du navigateur est plus petite que la largeur de l’élément `<div>` (500px). Le navigateur ajoute ensuite une barre de défilement horizontale à la page.
+
+L’utilisation `max-width` à la place , dans cette situation, améliorera la gestion des petites fenêtres par le navigateur.
+
+<div style="padding:10px;background-color:powderblue;color:black;height:100px; max-width:500px;">
+‎Cet élément a une hauteur de 100 pixels et une largeur maximale de 500 pixels.‎</div>
+
+---
+layout: two-cols
+---
+# CSS Box Model
+Tous les éléments HTML peuvent être considérés comme des boîtes.
+
+En CSS, le terme « Box model » est utilisé lorsqu’on parle de conception et de mise en page.
+
+Le box model est essentiellement une boîte qui entoure chaque élément HTML.
+
+Il se compose de: marges, bordures, padding  et le contenu réel.
+
+::right::
+![alt text](box-model.png "Title")
+---
+layout: two-cols
+---
+# Largeur et hauteur d’un élément
+
+Afin de définir correctement la largeur et la hauteur d’un élément dans tous les navigateurs, vous devez savoir comment fonctionne le box model.
+> **Important**: Lorsqu'on definit les propriétés `width` et `height` d’un élément avec CSS, cela **definit la largeur et la hauteur de la zone de contenu**.
+> Pour calculer la taille réelle d’un élément, on doit également ajouter le padding, les bordures et les marges.
+
+
+Cet élément `<div>` aura une largeur totale de **350px** :
+
+```css
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+```
+::right::
+Voici le calcul :
+> - 320px (largeur)
+> - +20px (padding gauche + droite)
+> - +10px (bordure gauche + droite)
+> - +0px (marge gauche + droite)
+> - =350px
+
+- La largeur totale d’un élément doit être calculée comme suit :
+
+> Largeur totale de l’élément = largeur + padding gauche + padding droit + bordure gauche + bordure droite + marge gauche + marge droite
+
+- La hauteur totale d’un élément doit être calculée comme suit :
+> Hauteur totale de l’élément = hauteur + padding supérieur + padding inférieur + bordure supérieure + bordure inférieure + marge supérieure + marge inférieure
+
+---
+layout: two-cols
+---
+::right::
